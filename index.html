@@ -4,13 +4,18 @@
         <title>Lucas Manfield</title>
         <script defer src="js/fontawesome-all.min.js"></script>
         <style>
-            .header {
+
+            .body {
+                font-family: Helvetica;
                 font-size:16px;
+            }
+            .header {
+                
                 max-width:680px;
                 margin: 15px auto;
                 padding-bottom:15px;
                 border-bottom:1px solid #ccc;
-                font-family: Helvetica;
+                
             }
             .name {
                 position:relative;
@@ -40,6 +45,26 @@
                 transition: all .2s ease-in-out;
             }
 
+            .project3x {
+                width:660px;
+                height:50px;
+            }
+
+            .duck:hover {
+                height:80px;
+            }
+
+            .duckhover {
+                display:none;
+            }
+
+            .duck:hover img {
+                display: none;
+            }
+            .duck:hover img.duckhover {
+                display: block;
+            }
+
             .project:hover {
                 transform: scale(1.05); 
             }
@@ -48,6 +73,16 @@
                 border-radius:6px;
                 height:100%;
                 width:100%;
+                object-fit: contain;
+            }
+
+            a.patent {
+                font-weight: bold;
+                text-align: center;
+                color: black;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 100px;
             }
         </style>
     </head>
@@ -78,6 +113,16 @@
             </a>
             <a class="project" href="https://techcrunch.com/2012/01/31/greencharge-app-reveals-cost-and-carbon-savings-to-electric-car-drivers/">
                 <img src="assets/greencharge.png"></img>
+            </a>
+            <a class="project patent" href="https://patentimages.storage.googleapis.com/a3/67/79/df98035fbbecce/US9434271.pdf">
+                US 9,434,271 
+            </a>
+            <a class="project patent" href="https://patentimages.storage.googleapis.com/1b/23/10/513995e436e638/US9714837.pdf">
+                US 9,714,837
+            </a>
+            <a class="project project3x duck" href="https://itunes.apple.com/us/developer/lawlmart/id301473451">
+                <img src="assets/duck.png"></img>
+                <img class="duckhover" src="assets/duckhover.png"></img>
             </a>
         </div>
     </body>

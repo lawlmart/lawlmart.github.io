@@ -2,7 +2,83 @@
 <html>
     <head>
         <title>Lucas Manfield</title>
+        <script defer src="js/fontawesome-all.min.js"></script>
+        <style>
+            .header {
+                font-size:16px;
+                max-width:680px;
+                margin: 15px auto;
+                padding-bottom:15px;
+                border-bottom:1px solid #ccc;
+                font-family: Helvetica;
+            }
+            .name {
+                position:relative;
+                top:2px;
+            }
+            svg {
+                color: black;
+                margin:2px;
+            }
+            svg:hover {
+                color: #aaa;
+            }
+            .contact {
+                float:right;
+            }
+            .projects {
+                max-width:680px;
+                margin: 5px auto;
+            }
+
+            .project {
+                
+                width:200px;
+                height:200px;
+                display:inline-block;
+                margin:10px;
+                transition: all .2s ease-in-out;
+            }
+
+            .project:hover {
+                transform: scale(1.05); 
+            }
+
+            .project img {
+                border-radius:6px;
+                height:100%;
+                width:100%;
+            }
+        </style>
     </head>
     <body>
+        <div class="header">
+            <span class="name">Lucas Manfield</span>
+            <div class="contact">
+                <a href="mailto:lman817+contact@gmail.com"><i class="far fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/manfield"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/lawlmart"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="projects">
+            <a class="project" href="https://pressminder.org/vis1">
+                <img src="assets/pressminder.png"></img>
+            </a>
+            <a class="project" href="https://streamable.com">
+                <img src="assets/streamable.png"></img>
+            </a>
+            <a class="project" href="https://www.sfmfoodbank.org/advocacy/missing-meals/">
+                <img src="assets/missingmeals.png"></img>
+            </a>
+            <a class="project" href="https://technical.ly/brooklyn/author/lmanfield/">
+                <img src="assets/technically.png"></img>
+            </a>
+            <a class="project" href="https://plugshare.com">
+                <img src="assets/plugshare.png"></img>
+            </a>
+            <a class="project" href="https://techcrunch.com/2012/01/31/greencharge-app-reveals-cost-and-carbon-savings-to-electric-car-drivers/">
+                <img src="assets/greencharge.png"></img>
+            </a>
+        </div>
     </body>
 </html>

@@ -5,6 +5,17 @@
     function ready() {
         FB.api('/me/videos/uploaded?fields=id,created_time,format,length,title,description,source', function(response) {
             console.log(response)
+            let videos = []
+            for (let v of response.data) {
+                let video = {
+                    hash: v.id,
+                    importedUri: v.source,
+                    ext: 'mp4',
+                    duration: v.length,
+                    mine: "mp4"
+                }
+                videos.push(video)
+            }
             fetch('https://xx4zlan94f.execute-api.us-east-1.amazonaws.com/dev/clips/batch/create',
             {
                 headers: {
@@ -13,14 +24,8 @@
                 },
                 method: "POST",
                 body: JSON.stringify({
-                    recordedAt,
-                    importedUri,      
-                    ext,             
-                    width,           
-                    height,          
-                    size,            
-                    duration,        
-                    mime,            
+                    source: 'facebook',
+                    videos: videos          
                 })
             })
         })

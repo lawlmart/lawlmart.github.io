@@ -3,7 +3,7 @@
 <script>
     
     function ready() {
-        FB.api('/me/videos/uploaded?fields=id,created_time,format,length,title,description,source,file_size', function(response) {
+        FB.api('/me/videos/uploaded?fields=id,created_time,format,length,title,description,source', function(response) {
             console.log(response)
             let videos = []
             for (let v of response.data) {
@@ -13,7 +13,7 @@
                     ext: 'mp4',
                     duration: v.length,
                     mine: "mp4",
-                    size: v.file_size,
+                    size: -1,
                     recordedAt: 1522861046000
                 }
                 videos.push(video)

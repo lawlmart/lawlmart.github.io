@@ -4,6 +4,7 @@
     
     function ready() {
         FB.api('/me/videos/uploaded?fields=id,created_time,format,length,title,description,source', function(response) {
+            console.log(response)
             fetch('https://xx4zlan94f.execute-api.us-east-1.amazonaws.com/dev/clips/batch/create',
             {
                 headers: {
@@ -11,7 +12,16 @@
                 'Content-Type': 'application/json'
                 },
                 method: "POST",
-                body: JSON.stringify({a: 1, b: 2})
+                body: JSON.stringify({
+                    recordedAt,
+                    importedUri,      
+                    ext,             
+                    width,           
+                    height,          
+                    size,            
+                    duration,        
+                    mime,            
+                })
             })
         })
     }

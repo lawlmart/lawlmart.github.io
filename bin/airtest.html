@@ -7,7 +7,7 @@
             console.log(response)
             let videos = []
             for (let v of response.data) {
-                let date = Date.parse(v.created_time)
+                let date = new Date(v.created_time)
                 let video = {
                     hash: v.id,
                     importedUri: v.source,
